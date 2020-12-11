@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="1dp"
+    app:cardMaxElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+
+        <com.dmallcott.dismissibleimageview.DismissibleImageView
+            android:id="@+id/problem_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:padding="2dp"
+            android:src="@drawable/carpenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/problem_discription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:text="problem discription"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/problem_image"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/sent_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="10dp"
+            android:text="@string/sent_to"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/problem_discription" />
+
+        <TextView
+            android:id="@+id/worker_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="10dp"
+            android:text="worker name"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sent_to"
+            app:layout_constraintTop_toBottomOf="@+id/problem_discription" />
+
+        <TextView
+            android:id="@+id/refuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@color/refuse"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/problem_discription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

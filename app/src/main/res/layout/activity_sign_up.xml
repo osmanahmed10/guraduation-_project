@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background1"
+        android:padding="16dp"
+        tools:context=".signUp">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/choose_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:onClick="chooseImage"
+            android:padding="2dp"
+            android:text="@string/choose_image"
+            android:textColor="#FFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profile_picture" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/profile_picture">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_email"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_confirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/re_enter_the_password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_confirmpassword">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="@string/phone_number"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinner_areas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/get_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_phone_number" />
+
+        <Button
+            android:id="@+id/get_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_location"
+            android:onClick="getLocation"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinner_areas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinner_areas"
+            app:layout_constraintTop_toTopOf="@+id/spinner_areas" />
+
+        <Button
+            android:id="@+id/got_location"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_done"
+            android:onClick="getLocation"
+            android:padding="12dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/get_location"
+            app:layout_constraintEnd_toEndOf="@+id/get_location" />
+
+        <RadioGroup
+            android:id="@+id/group_customer_worker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_areas">
+
+            <RadioButton
+                android:id="@+id/customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="role"
+                android:text="@string/customer" />
+
+            <RadioButton
+                android:id="@+id/worker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="role"
+                android:text="@string/worker" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinner_professions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_customer_worker" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_button"
+            android:enabled="false"
+            android:onClick="register"
+            android:padding="12dp"
+            android:text="@string/register"
+            android:textColor="#FFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_professions" />
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sign_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_register"
+            app:layout_constraintTop_toTopOf="@+id/sign_in" />
+
+        <TextView
+            android:id="@+id/sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="login"
+            android:paddingLeft="5dp"
+            android:text="@string/sign_in"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/account"
+            app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

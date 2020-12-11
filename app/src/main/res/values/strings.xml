@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">G B W</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email_address">Email Address</string>
+    <string name="re_enter_the_password">Re-enter the Password</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="electrician">Electrician</string>
+    <string name="plumber">Plumber</string>
+    <string name="carpenter">Carpenter</string>
+    <string name="mechanic">Mechanic</string>
+    <string name="builder">Builder</string>
+    <string name="chef">Chef</string>
+    <string name="gardener">Gardener</string>
+    <string name="blacksmith">Blacksmith</string>
+    <string name="search">Search</string>
+    <string name="customer">Customer</string>
+    <string name="worker">Worker</string>
+    <string name="home_address">Home Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="request">Request</string>
+    <string name="explain_your_problem_here">Explain your problem here</string>
+    <string name="logout">Logout</string>
+    <string name="accept">Accept</string>
+    <string name="refuse">Refuse</string>
+    <string name="favourites">Favourites</string>
+    <string name="home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="el_minya">El-Minya</string>
+    <string name="mallawi">Mallawi</string>
+    <string name="abu_qurqas">Abu Qurqas</string>
+    <string name="bani_mazar">Bani Mazar</string>
+    <string name="samalut">Samalut</string>
+    <string name="mattay">Mattay</string>
+    <string name="maghagha">Maghagha</string>
+    <string name="deirmawas">Deirmawas</string>
+    <string name="el_audwa">El Audwa</string>
+    <string name="map">Point Your Home Location</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="photo_is_being_uploaded">Please wait while your photo is being Uploaded...</string>
+    <string name="request_is_being_sent">Please wait while your Request is being sent...</string>
+    <string name="pointyourhomelocation">Please point your home location</string>
+    <string name="yourcurrentlocation">Your current locatoin</string>
+    <string name="enablelocationpermission">Enable Location Permission Required</string>
+    <string name="yourhomelocation">Your Home Locatoin</string>
+    <string name="uploading_image_take_time">Uploading Image may take a few moments\nPlease wait...</string>
+    <string name="cancel">Cancel</string>
+    <string name="new_request">New Work For You, Tab here.</string>
+    <string name="sent_to">sent to :</string>
+    <string name="select_sort_type">Select Sort Type:</string>
+    <string name="rate">Rate</string>
+    <string name="notify_worker">We notify the chosen worker now\nPlease wait...</string>
+
+    <string-array name="areas">
+        <item>@string/el_minya</item>
+        <item>@string/mallawi</item>
+        <item>@string/abu_qurqas</item>
+        <item>@string/bani_mazar</item>
+        <item>@string/samalut</item>
+        <item>@string/mattay</item>
+        <item>@string/maghagha</item>
+        <item>@string/deirmawas</item>
+        <item>@string/el_audwa</item>
+    </string-array>
+
+    <string-array name="professions">
+        <item>@string/plumber</item>
+        <item>@string/electrician</item>
+        <item>@string/carpenter</item>
+        <item>@string/mechanic</item>
+        <item>@string/builder</item>
+        <item>@string/chef</item>
+        <item>@string/blacksmith</item>
+        <item>@string/gardener</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="chat">Chat</string>
+    <string name="chat_list">Chat List</string>
+    <string name="empty_message">Can\'t send an Empty Message</string>
+    <string name="his_name">His Name</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="his_message">His Message</string>
+    <string name="delivered">delivered</string>
+    <string name="seen">Seen</string>
+    <string name="the_last_message">The Last Message</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="team_members">Team Members</string>
+
+</resources>

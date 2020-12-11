@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infoAboutUs">
+
+    <TextView
+        android:id="@+id/paragraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is our Graduation Project, Wooah.\nOur Team is working on this project 'G B W' to produce a new Features and Solving the problem we discussed before"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="25dp"
+        android:background="#454545"
+        app:layout_constraintTop_toBottomOf="@+id/paragraph" />
+
+    <LinearLayout
+        android:id="@+id/team_members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintStart_toStartOf="@+id/paragraph"
+        app:layout_constraintEnd_toEndOf="@+id/paragraph">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/team_members"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1- Omar Khaled Mohammed"
+            android:layout_margin="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2- Othman Ahmed Eid "
+            android:layout_margin="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3- Ahmed Mohammed Hassan"
+            android:layout_margin="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4-Mohammed Osama Talaat"
+            android:layout_margin="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5- Ahmed Taha Mohammed"
+            android:layout_margin="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="25dp"
+        android:background="#454545"
+        app:layout_constraintTop_toBottomOf="@+id/team_members" />
+
+    <TextView
+        android:id="@+id/thanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thanks For Using Our Product"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
